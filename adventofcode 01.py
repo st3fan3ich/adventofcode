@@ -32,9 +32,9 @@ for i in range(1000):
         a = filter[0]                                           # get first number from filtered array
         b = filter[-1]                                          # get last number from filtered array
         #print(filter)
-        if int(a) > 99999:                                        # check for exceptions first integer > 999
+        if int(a) > 99999:                                        # check for exceptions first integer > 99999
             a1 = int(a)//100000
-        elif int(a) > 9999:                                        # check for exceptions first integer > 999
+        elif int(a) > 9999:                                        # check for exceptions first integer > 9999
             a1 = int(a)//10000
         elif int(a) > 999:                                        # check for exceptions first integer > 999
             a1 = int(a)//1000
