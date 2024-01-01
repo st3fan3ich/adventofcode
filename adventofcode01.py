@@ -10,14 +10,14 @@ file=open("file.txt","r")
 filter = []                                             # empty array, to be filled with the filtered numbers
 coord = []                                              # empty array, to be filled with the coordinates
 
-regex = '[\d]+[.,\d]+|[\d]*[.][\d]+|[\d]+'                  # define what you are looking for with re.search
+p = '[\d]+[.,\d]+|[\d]*[.][\d]+|[\d]+'                  # define what you are looking for with re.search
 
 for i in range(10):
     s = file.readline()
     #print(s)                         # string you are filtering
     filter = []
 
-    if re.search(regex, s) is not None:                         # filter funktion
+    if re.search(p, s) is not None:                         # filter funktion
         for catch in re.finditer(p, s):
             filter.append(catch[0])
             #print(catch[0])                                         # catch is a match object, for testing
