@@ -9,6 +9,7 @@ file=open("input_file01.txt","r")
 
 filter = []                                             # empty array, to be filled with the filtered numbers
 coord = []                                              # empty array, to be filled with the coordinates
+solution = 0
 
 regex = '[\d]+[.,\d]+|[\d]*[.][\d]+|[\d]+'                  # define what you are looking for with re.search
 
@@ -31,7 +32,11 @@ for i in range(1000):
         a = filter[0]                                           # get first number from filtered array
         b = filter[-1]                                          # get last number from filtered array
         #print(filter)
-        if int(a) > 999:                                        # check for exceptions first integer > 999
+        if int(a) > 99999:                                        # check for exceptions first integer > 999
+            a1 = int(a)//100000
+        elif int(a) > 9999:                                        # check for exceptions first integer > 999
+            a1 = int(a)//10000
+        elif int(a) > 999:                                        # check for exceptions first integer > 999
             a1 = int(a)//1000
             #print("a>999", a1)
         elif int(a) > 99:                                       # check for exceptions first integer > 99
@@ -58,6 +63,13 @@ for i in range(1000):
     coord.append(int(c))
             #print(coord, i)
 print(coord)
+
+for i in range(len(coord)):
+    print([coord[i]], i)
+    solution = solution + coord[i]
+
+print("the solution is:", solution)
+
 
 """
 with open("input_file01.txt", "r") as file:
