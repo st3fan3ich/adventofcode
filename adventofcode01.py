@@ -33,7 +33,7 @@ solution = 0
 #             matches[0] = "7"
 #         elif matches[0] == "eight":
 #             matches[0] = "8"
-#         elif matches[0] == "9":
+#         elif matches[0] == "nine":
 #             matches[0] = "9"
 
 # def convert_last():
