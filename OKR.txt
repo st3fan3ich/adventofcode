@@ -1,0 +1,9 @@
+OKR
+
+Objectiv: Write a complex simulation of an physical phenomenon
+
+Keys:
+Understand the Physics of the problem
+implement the physics in python
+write a simulator in python
+extract the data from the simulations and analyse the data
