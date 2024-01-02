@@ -57,7 +57,9 @@ solution = 0
 #             matches[-1] = "9"
 
 
-regex = re.compile(r"(one|two|three|four|five|six|seven|eight|nine|\d)")
+regex = re.compile(
+    r"(one|two|three|four|five|six|seven|eight|nine|\d).*(one|two|three|four|five|six|seven|eight|nine|\d)|(one|two|three|four|five|six|seven|eight|nine|\d)"
+)
 with open("input_file01.txt", "r") as file:
     for line in file:
         matches = [m[0] for m in regex.finditer(line)]
